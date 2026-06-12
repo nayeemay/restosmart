@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation | RestoSmart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="brand" href="index.html"><span>R</span>estoSmart</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="reservation.html" class="active">Reservation</a>
+                <a href="menu.html" class="nav-cart">Cart <span id="cartCount">0</span></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero reservation-hero">
+            <div class="container page-hero-grid">
+                <div>
+                    <p class="eyebrow">Table Management</p>
+                    <h1>Reserve a table and reduce waiting time.</h1>
+                    <p>Designed from field observations where crowded dining areas and manual table handling created customer delays.</p>
+                </div>
+                <div class="page-info-card">
+                    <strong>Peak Hour Insight</strong>
+                    <span>Digital table booking helps staff plan seating and avoid crowd confusion.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container reservation-layout">
+                <div class="reservation-side">
+                    <p class="eyebrow">Available Zones</p>
+                    <h2>Choose comfort before arriving</h2>
+                    <p>RestoSmart can guide customers with visible table zones, estimated waiting, and dining preferences.</p>
+
+                    <div class="zone-grid">
+                        <div class="zone-card available">
+                            <strong>Family Zone</strong>
+                            <span>6 tables available</span>
+                        </div>
+                        <div class="zone-card busy">
+                            <strong>Window Zone</strong>
+                            <span>High demand</span>
+                        </div>
+                        <div class="zone-card available">
+                            <strong>Quick Dining</strong>
+                            <span>4 tables available</span>
+                        </div>
+                    </div>
+
+                    <div class="owner-note">
+                        <h3>Why this matters</h3>
+                        <p>Restaurant staff reported pressure and confusion during peak hours. A digital reservation form supports better customer flow.</p>
+                    </div>
+                </div>
+
+                <form class="reservation-form" id="reservationForm">
+                    <div class="form-title">
+                        <h2>Book Your Table</h2>
+                        <span>Simple demo form</span>
+                    </div>
+                    <div class="form-message" id="formMessage"></div>
+
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter customer name" required>
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter 10 digit phone number" required>
+
+                    <div class="form-row">
+                        <div>
+                            <label for="date">Date</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div>
+                            <label for="time">Time</label>
+                            <input type="time" id="time" name="time" required>
+                        </div>
+                    </div>
+
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" name="guests" min="1" max="20" placeholder="Example: 4" required>
+
+                    <button class="btn btn-primary full-width" type="submit">Submit Reservation</button>
+                    <p class="form-help">No backend is connected. JavaScript validates and shows confirmation.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <strong>RestoSmart</strong>
+            <span>Reservation · Crowd planning · Better dining</span>
+            <span>College mini project</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

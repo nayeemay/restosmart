@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | RestoSmart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="brand" href="index.html"><span>R</span>estoSmart</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="menu.html" class="active">Menu</a>
+                <a href="reservation.html">Reservation</a>
+                <a href="#cartSummary" class="nav-cart">Cart <span id="cartCount">0</span></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container page-hero-grid">
+                <div>
+                    <p class="eyebrow">Digital Menu</p>
+                    <h1>Order faster with clear dish information.</h1>
+                    <p>Search, filter, add items, and view a live cart summary. This simulates the ordering and billing flow without backend code.</p>
+                </div>
+                <div class="page-info-card">
+                    <strong>Hygiene Visibility</strong>
+                    <span>All displayed items include clean-kitchen and prep-time indicators for customer trust.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container menu-layout">
+                <div>
+                    <div class="menu-toolbar">
+                        <input type="search" id="menuSearch" placeholder="Search food item">
+                        <select id="categoryFilter" aria-label="Filter by category">
+                            <option value="All">All Categories</option>
+                            <option value="Starters">Starters</option>
+                            <option value="Main Course">Main Course</option>
+                            <option value="Desserts">Desserts</option>
+                            <option value="Beverages">Beverages</option>
+                        </select>
+                    </div>
+
+                    <div class="toast" id="toast">Item added to cart</div>
+
+                    <div class="menu-grid" id="menuGrid">
+                        <article class="food-card" data-name="Paneer Tikka" data-category="Starters" data-price="220">
+                            <img src="assets/images/dish-starter.svg" alt="Paneer Tikka">
+                            <div class="food-body">
+                                <div class="food-meta">
+                                    <span>Starters</span>
+                                    <b>12 min</b>
+                                </div>
+                                <h3>Paneer Tikka</h3>
+                                <p>Smoky grilled paneer cubes with onion, capsicum, and mint chutney.</p>
+                                <div class="hygiene-note">Clean prep · Medium spice</div>
+                                <div class="food-footer">
+                                    <strong>₹220</strong>
+                                    <button class="add-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="food-card" data-name="Crispy Corn" data-category="Starters" data-price="160">
+                            <img src="assets/images/dish-starter.svg" alt="Crispy Corn">
+                            <div class="food-body">
+                                <div class="food-meta">
+                                    <span>Starters</span>
+                                    <b>10 min</b>
+                                </div>
+                                <h3>Crispy Corn</h3>
+                                <p>Golden fried corn tossed with herbs and light Indian spices.</p>
+                                <div class="hygiene-note">Fresh batch · Quick serve</div>
+                                <div class="food-footer">
+                                    <strong>₹160</strong>
+                                    <button class="add-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="food-card" data-name="Veg Thali" data-category="Main Course" data-price="280">
+                            <img src="assets/images/dish-main.svg" alt="Veg Thali">
+                            <div class="food-body">
+                                <div class="food-meta">
+                                    <span>Main Course</span>
+                                    <b>18 min</b>
+                                </div>
+                                <h3>Veg Thali</h3>
+                                <p>Rice, dal, curry, roti, pickle, salad, and a sweet dish.</p>
+                                <div class="hygiene-note">Balanced meal · Less waste combo</div>
+                                <div class="food-footer">
+                                    <strong>₹280</strong>
+                                    <button class="add-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="food-card" data-name="Butter Naan Combo" data-category="Main Course" data-price="260">
+                            <img src="assets/images/dish-main.svg" alt="Butter Naan Combo">
+                            <div class="food-body">
+                                <div class="food-meta">
+                                    <span>Main Course</span>
+                                    <b>16 min</b>
+                                </div>
+                                <h3>Butter Naan Combo</h3>
+                                <p>Soft butter naan served with creamy paneer gravy.</p>
+                                <div class="hygiene-note">Hot serve · Popular dinner item</div>
+                                <div class="food-footer">
+                                    <strong>₹260</strong>
+                                    <button class="add-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="food-card" data-name="Gulab Jamun" data-category="Desserts" data-price="120">
+                            <img src="assets/images/dish-dessert.svg" alt="Gulab Jamun">
+                            <div class="food-body">
+                                <div class="food-meta">
+                                    <span>Desserts</span>
+                                    <b>6 min</b>
+                                </div>
+                                <h3>Gulab Jamun</h3>
+                                <p>Classic warm dessert soaked in aromatic sugar syrup.</p>
+                                <div class="hygiene-note">Fresh syrup · Sweet finish</div>
+                                <div class="food-footer">
+                                    <strong>₹120</strong>
+                                    <button class="add-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="food-card" data-name="Fresh Lime Soda" data-category="Beverages" data-price="80">
+                            <img src="assets/images/dish-beverage.svg" alt="Fresh Lime Soda">
+                            <div class="food-body">
+                                <div class="food-meta">
+                                    <span>Beverages</span>
+                                    <b>4 min</b>
+                                </div>
+                                <h3>Fresh Lime Soda</h3>
+                                <p>Refreshing lime drink served chilled, sweet or salted.</p>
+                                <div class="hygiene-note">Filtered water · Fresh lime</div>
+                                <div class="food-footer">
+                                    <strong>₹80</strong>
+                                    <button class="add-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <aside class="cart-panel" id="cartSummary">
+                    <div class="cart-header">
+                        <h2>Order Summary</h2>
+                        <button id="clearCart" type="button">Clear</button>
+                    </div>
+                    <div id="cartItems" class="cart-items">
+                        <p class="empty-cart">No items added yet.</p>
+                    </div>
+                    <div class="bill-box">
+                        <div><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
+                        <div><span>Tax 5%</span><strong id="tax">₹0</strong></div>
+                        <div class="grand-total"><span>Total</span><strong id="grandTotal">₹0</strong></div>
+                    </div>
+                    <a href="reservation.html" class="btn btn-primary full-width">Reserve Table</a>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <strong>RestoSmart</strong>
+            <span>Digital menu · Smart cart · Faster billing</span>
+            <span>Static HTML/CSS/JS demo</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
